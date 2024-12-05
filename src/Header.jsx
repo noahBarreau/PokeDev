@@ -1,10 +1,10 @@
 import React from "react";
-import pokeballLogo from "./assets/pokeball.png"; // Remplacez par le chemin réel de l'image
+import pokeballLogo from "./assets/pokeball.png";
 
 const Header = ({ onSearch }) => {
   const handleSearch = (e) => {
     if (onSearch) {
-      onSearch(e.target.value); // Appelle la fonction de recherche si elle est fournie
+      onSearch(e.target.value);
     }
   };
 

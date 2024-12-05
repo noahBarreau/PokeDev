@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './css/style.css';
+import { Link } from 'react-router-dom';
 
 const PokemonTypes = () => {
   const [pokemons, setPokemon] = useState(null);
@@ -26,6 +27,7 @@ const PokemonTypes = () => {
     <section className="pokemon-container">
       {pokemons?.map((pokemon) => {
         return (
+          <Link to={`/AllPokemons?id=${pokemon.id}`}>
           <article key={pokemon.id} className="pokemon-card">
             <div className="pokemon-header">
               <p className="pokemon-name">{pokemon.name}</p>
@@ -33,6 +35,7 @@ const PokemonTypes = () => {
             </div>
             <img className="pokemon-image" src={pokemon.image} alt={pokemon.name} />
           </article>
+          </Link>
         );
       })}
     </section>
