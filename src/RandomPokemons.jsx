@@ -27,7 +27,7 @@ const PokemonTypes = () => {
     <section className="pokemon-container">
       {pokemons?.map((pokemon) => {
         return (
-          <Link to={`/AllPokemons?id=${pokemon.id}`}>
+          <Link to={`/AllPokemonsPage?id=${pokemon.id}`}>
           <article key={pokemon.id} className="pokemon-card">
             <div className="pokemon-header">
               <p className="pokemon-name">{pokemon.name}</p>

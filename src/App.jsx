@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Home";
-import AllPokemons from "./AllPokemonsPage";
+import AllPokemonsPage from "./AllPokemonsPage";
 
 import './css/style.css';
 
@@ -9,7 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/AllPokemons" element={<AllPokemons />} />
+          <Route path="/AllPokemonsPage" element={<AllPokemonsPage />} />
         </Routes>
       </BrowserRouter>
   );
