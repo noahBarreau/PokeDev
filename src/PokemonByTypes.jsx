@@ -1,29 +1,31 @@
 import { useEffect, useState } from "react";
-import './css/style.css';
 import { Link } from 'react-router-dom';
 
-const PokemonTypes = () => {
-  const [pokemons, setPokemon] = useState(null);
+
+const PokemonByTypes = ({ type }) => {
+  const [pokemons, setPokemons] = useState(null);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    fetch("https://pokebuildapi.fr/api/v1/random/team")
-      .then((response) => {
-        return response.json();
-      })
+    fetch(`https://pokebuildapi.fr/api/v1/pokemon/type/${type}`)
+      .then((response) => response.json())
       .then((data) => {
-        setPokemon(data);
+        setPokemons(data);
       })
       .catch(() => {
         setIsError(true);
       });
-  }, []);
+  }, [type]);
 
   if (isError) {
-    return <p>Il y a eu une erreur de chargement. Veuillez rafraichir la page</p>;
+    return <p>Erreur de chargement du Pokémon. Veuillez essayer à nouveau.</p>;
   }
-  return (
 
+  if (!pokemons) {
+    return <p>Chargement...</p>;
+  }
+
+  return (
     <section className="pokemon-container">
       {pokemons?.map((pokemon) => {
         return (
@@ -39,7 +41,7 @@ const PokemonTypes = () => {
         );
       })}
     </section>
-  );  
+  );
 };
 
-export default PokemonTypes;
+export default PokemonByTypes;

@@ -25,10 +25,10 @@ function App() {
         {/* Ajoutez ici la logique pour filtrer ou afficher les résultats */}
       </div>
 
-      <Link to={"/AllPokemonsPage"}>Pokémon du moment</Link>
+      <Link to={"/DisplayPokemon"}>Pokémon du moment</Link>
       <RandomPokemons/>
       <br></br>
-      <h1>Type de pokémon</h1>
+      <Link to={"/DisplayAllTypes"}>Type de pokémon</Link>
       <RandomTypes/>
     </>
   )
