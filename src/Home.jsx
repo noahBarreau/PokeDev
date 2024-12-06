@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 import './css/style.css';
 
-function App() {
+function Home() {
 
   const [search, setSearch] = useState("");
 
@@ -34,4 +34,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

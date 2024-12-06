@@ -1,9 +1,9 @@
-import Header from "./Header";
-import AllPokemons from "./AllPokemons";
-import PokemonById from "./PokemonById";
+import Header from "../Header";
+import AllPokemons from "../AllPokemons";
+import PokemonById from "../PokemonById";
 import { useLocation } from "react-router-dom";
 
-import './css/style.css';
+import '../css/style.css';
 
 function DisplayRandomPokemonDetail() {
   const location = useLocation();

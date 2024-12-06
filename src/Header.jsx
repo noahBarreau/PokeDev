@@ -23,6 +23,7 @@ const Header = ({ onSearch }) => {
         <Link to="/DisplayPokemonByGen" className="nav-link">Pokémons</Link>
         <Link to="/DisplayAllTypes" className="nav-link">Types</Link>
         <Link to="/DisplayRandomPokemonDetail" className="nav-link">Random</Link>
+        <Link to="/DisplayFight" className="nav-link">Fight</Link>
       </nav>
       <div className="header-search">
         <input

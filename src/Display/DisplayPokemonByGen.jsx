@@ -1,8 +1,8 @@
-import Header from "./Header";
-import PokemonByGen from "./PokemonByGen";
+import Header from "../Header";
+import PokemonByGen from "../PokemonByGen";
 import { useLocation } from "react-router-dom";
 
-import './css/style.css';
+import '../css/style.css';
 
 function App() {
   const location = useLocation();

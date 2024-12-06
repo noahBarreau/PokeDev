@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Home";
-import DisplayAllTypes from "./DisplayAllTypes";
-import DisplayPokemon from "./DisplayPokemon";
+import DisplayAllTypes from "./Display/DisplayAllTypes";
+import DisplayPokemon from "./Display/DisplayPokemon";
 import AllPokemonByTypes from "./AllPokemonByTypes";
-import DisplayPokemonByGen from "./DisplayPokemonByGen";
-import DisplayRandomPokemonDetail from "./DisplayRandomPokemonDetail";
-import DisplayPokemonByName from "./DisplayPokemonByName";
+import DisplayPokemonByGen from "./Display/DisplayPokemonByGen";
+import DisplayRandomPokemonDetail from "./Display/DisplayRandomPokemonDetail";
+import DisplayPokemonByName from "./Display/DisplayPokemonByName";
 
 
 import './css/style.css';
