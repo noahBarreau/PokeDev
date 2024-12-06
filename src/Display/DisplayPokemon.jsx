@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 import '../css/style.css';
 
-function App() {
+function DisplayPokemon() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const id = params.get('id');
@@ -32,4 +32,4 @@ function App() {
 
 }
 
-export default App
+export default DisplayPokemon

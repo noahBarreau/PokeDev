@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import '../css/style.css';
 
-function App() {
+function DisplayPokemonByName() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const name = params.get('name');
@@ -18,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default DisplayPokemonByName;

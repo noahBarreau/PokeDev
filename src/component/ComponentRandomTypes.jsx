@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import useRandomTypes from '../Hook/useRandomTypes'; // Importation du hook personnalisé
 import '../css/style.css';
 
-const PokemonTypes = () => {
+const RandomTypes = () => {
   // Utilisation du hook personnalisé
   const { types, isError, listId } = useRandomTypes();
 
@@ -33,4 +33,4 @@ const PokemonTypes = () => {
   );
 };
 
-export default PokemonTypes;
+export default RandomTypes;

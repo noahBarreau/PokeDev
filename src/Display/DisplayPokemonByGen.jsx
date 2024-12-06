@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import '../css/style.css';
 
-function App() {
+function DisplayPokemonByGen() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
 
@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default DisplayPokemonByGen;

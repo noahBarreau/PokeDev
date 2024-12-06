@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import '../css/style.css';
 
-function App() {
+function DisplayAllTypes() {
   const location = useLocation();
   return (
     <>
@@ -16,4 +16,4 @@ function App() {
   )
 }
 
-export default App
+export default DisplayAllTypes
