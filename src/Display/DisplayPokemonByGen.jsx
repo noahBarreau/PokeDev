@@ -1,5 +1,5 @@
 import Header from "../Header";
-import PokemonByGen from "../PokemonByGen";
+import PokemonByGen from "../component/ComponentPokemonByGen";
 import { useLocation } from "react-router-dom";
 
 import '../css/style.css';
