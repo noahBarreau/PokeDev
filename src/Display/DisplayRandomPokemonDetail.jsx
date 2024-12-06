@@ -1,6 +1,6 @@
 import Header from "../Header";
 import AllPokemons from "../AllPokemons";
-import PokemonById from "../PokemonById";
+import PokemonById from "../component/ComponentPokemonById";
 import { useLocation } from "react-router-dom";
 
 import '../css/style.css';

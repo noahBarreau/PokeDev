@@ -1,20 +1,11 @@
-import { useEffect, useState } from "react";
+// src/components/PokemonById.js
+import React from "react";
+import usePokemonById from "../Hook/usePokemonById"; // Importation du hook
+import "../css/style.css"; // Chemin CSS mis à jour
 
 const PokemonById = ({ id }) => {
-  const [pokemon, setPokemon] = useState(null);
-  const [isError, setIsError] = useState(false);
-
-  useEffect(() => {
-    // Appel à l'API avec l'ID
-    fetch(`https://pokebuildapi.fr/api/v1/pokemon/${id}`)
-      .then((response) => response.json())
-      .then((data) => {
-        setPokemon(data);
-      })
-      .catch(() => {
-        setIsError(true);
-      });
-  }, [id]); // L'ID dans l'URL déclenche l'effet chaque fois qu'il change
+  // Utilisation du hook personnalisé
+  const { pokemon, isError } = usePokemonById(id);
 
   if (isError) {
     return <p>Erreur de chargement du Pokémon. Veuillez essayer à nouveau.</p>;

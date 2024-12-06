@@ -1,5 +1,5 @@
 import Header from "../Header";
-import PokemonByName from "../PokemonByName";
+import PokemonByName from "../component/ComponentPokemonByName";
 import { useLocation } from "react-router-dom";
 
 import '../css/style.css';
