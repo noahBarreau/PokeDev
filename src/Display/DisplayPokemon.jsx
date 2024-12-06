@@ -14,8 +14,6 @@ function DisplayPokemon() {
     return (
       <>
         <Header />
-        
-        <h1>Tous les Pokémons</h1>
         <PokemonById id={id}/>
       </>
     )
