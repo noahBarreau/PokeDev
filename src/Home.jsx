@@ -2,8 +2,8 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import Header from "./Header";
-import RandomPokemons from "./RandomPokemons";
-import RandomTypes from "./RandomTypes";
+import RandomPokemons from "./component/ComponentRandomPokemons";
+import RandomTypes from "./component/ComponentRandomTypes";
 import { Link } from 'react-router-dom';
 
 import './css/style.css';
