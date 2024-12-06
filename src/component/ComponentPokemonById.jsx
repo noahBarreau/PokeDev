@@ -21,7 +21,7 @@ const PokemonById = ({ id }) => {
         return "type-water";
       case "plante":
         return "type-grass";
-      case "électrique":
+      case "électrik":
         return "type-electric";
       case "glace":
         return "type-ice";
