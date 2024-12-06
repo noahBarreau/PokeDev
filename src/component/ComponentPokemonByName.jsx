@@ -56,7 +56,6 @@ const PokemonByName = ({ name }) => {
 
   return (
 <section className="pokemon-container">
-          {pokemon?.map((pokemon) => {
             return (
               <article key={pokemon.id} className="pokemon-card">
                 <div className="pokemon-header">
@@ -93,7 +92,6 @@ const PokemonByName = ({ name }) => {
                 </div>
               </article>
             );
-          })}
         </section>
   );
 };
