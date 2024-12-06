@@ -1,28 +1,15 @@
-import { useEffect, useState } from "react";
-import './css/style.css';
+import React from "react";
+import useAllPokemons from "../Hook/useAllPokemons";
+import "../css/style.css";
 
-const PokemonTypes = () => {
-  const [pokemons, setPokemon] = useState(null);
-  const [isError, setIsError] = useState(false);
-
-  useEffect(() => {
-    fetch("https://pokebuildapi.fr/api/v1/pokemon")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setPokemon(data);
-      })
-      .catch(() => {
-        setIsError(true);
-      });
-  }, []);
+const AllPokemon = () => {
+  const { pokemons, isError } = useAllPokemons();
 
   if (isError) {
     return <p>Il y a eu une erreur de chargement. Veuillez rafraichir la page</p>;
   }
-  return (
 
+  return (
     <section className="pokemon-container">
       {pokemons?.map((pokemon) => {
         return (
@@ -36,7 +23,7 @@ const PokemonTypes = () => {
         );
       })}
     </section>
-  );  
+  );
 };
 
-export default PokemonTypes;
+export default AllPokemon;

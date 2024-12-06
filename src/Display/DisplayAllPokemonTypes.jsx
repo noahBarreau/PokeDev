@@ -1,9 +1,9 @@
 
-import Header from "./Header";
-import PokemonByTypes from "./component/ComponentPokemonByTypes";
+import Header from "../Header";
+import PokemonByTypes from "../component/ComponentPokemonByTypes";
 import { useLocation } from "react-router-dom";
 
-import './css/style.css';
+import '../css/style.css';
 
 function App() {
   const location = useLocation();

@@ -1,5 +1,5 @@
 import Header from "../Header";
-import AllPokemons from "../AllPokemons";
+import AllPokemons from "../component/ComponentAllPokemons";
 import PokemonById from "../component/ComponentPokemonById";
 import { useLocation } from "react-router-dom";
 

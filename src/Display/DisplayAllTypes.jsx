@@ -1,5 +1,5 @@
 import Header from "../Header";
-import AllTypes from "../AllTypes";
+import AllTypes from "../component/ComponentAllTypes";
 import { useLocation } from "react-router-dom";
 
 import '../css/style.css';

@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./Home";
 import DisplayAllTypes from "./Display/DisplayAllTypes";
 import DisplayPokemon from "./Display/DisplayPokemon";
-import AllPokemonByTypes from "./AllPokemonByTypes";
+import AllPokemonByTypes from "./Display/DisplayAllPokemonTypes";
 import DisplayPokemonByGen from "./Display/DisplayPokemonByGen";
 import DisplayRandomPokemonDetail from "./Display/DisplayRandomPokemonDetail";
 import DisplayPokemonByName from "./Display/DisplayPokemonByName";
