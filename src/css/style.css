@@ -166,3 +166,26 @@
 .search-input::placeholder {
   color: #999;
 }
+
+/* Conteneur principal des générations */
+.gens-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Section pour chaque génération */
+.gen-section {
+  border: 2px solid #cc0000;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.gen-section h2 {
+  margin-bottom: 10px;
+  color: #cc0000;
+  font-size: 20px;
+  text-align: center;
+}
