@@ -1,11 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import pokeballLogo from "./assets/pokeball.png";
 
 const Header = ({ onSearch }) => {
-  const handleSearch = (e) => {
-    if (onSearch) {
-      onSearch(e.target.value);
+  const navigate = useNavigate();
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      console.log("Valeur entrer :"+e.target.value);
+      navigate(`/DisplayPokemonByName?name=${e.target.value}`);
     }
   };
 
@@ -26,7 +29,7 @@ const Header = ({ onSearch }) => {
           type="text"
           placeholder="Rechercher un Pokémon..."
           className="search-input"
-          onChange={handleSearch}
+          onKeyDown={handleKeyDown}
         />
       </div>
     </header>
