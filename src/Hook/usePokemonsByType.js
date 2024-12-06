@@ -1,4 +1,3 @@
-// src/Hook/usePokemonsByType.js
 import { useEffect, useState } from "react";
 
 const usePokemonsByType = (type) => {
@@ -6,7 +5,7 @@ const usePokemonsByType = (type) => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if (!type) return; // Vérifie si le type est défini avant d'effectuer l'appel API
+    if (!type) return;
 
     fetch(`https://pokebuildapi.fr/api/v1/pokemon/type/${type}`)
       .then((response) => response.json())
@@ -16,7 +15,7 @@ const usePokemonsByType = (type) => {
       .catch(() => {
         setIsError(true);
       });
-  }, [type]); // L'effet se déclenche chaque fois que le type change
+  }, [type]);
 
   return { pokemons, isError };
 };

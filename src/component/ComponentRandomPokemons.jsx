@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import useRandomPokemons from '../hook/useRandomPokemons'; // Importer le hook personnalisé
+import useRandomPokemons from '../hook/useRandomPokemons';
 import '../css/style.css';
 
 const RandomPokemon = () => {
-  // Utilisation du hook personnalisé
   const { pokemons, isError } = useRandomPokemons();
 
   if (isError) {

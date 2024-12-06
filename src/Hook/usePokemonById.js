@@ -1,4 +1,3 @@
-// src/Hook/usePokemonById.js
 import { useEffect, useState } from "react";
 
 const usePokemonById = (id) => {
@@ -6,7 +5,7 @@ const usePokemonById = (id) => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if (!id) return; // Vérifie si l'ID est valide
+    if (!id) return;
 
     fetch(`https://pokebuildapi.fr/api/v1/pokemon/${id}`)
       .then((response) => response.json())
@@ -16,7 +15,7 @@ const usePokemonById = (id) => {
       .catch(() => {
         setIsError(true);
       });
-  }, [id]); // L'ID déclenche l'effet à chaque changement
+  }, [id]);
 
   return { pokemon, isError };
 };

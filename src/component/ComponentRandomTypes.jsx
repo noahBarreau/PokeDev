@@ -1,11 +1,9 @@
-// src/components/PokemonTypes.js
 import React from "react";
 import { Link } from 'react-router-dom';
-import useRandomTypes from '../Hook/useRandomTypes'; // Importation du hook personnalisé
+import useRandomTypes from '../Hook/useRandomTypes';
 import '../css/style.css';
 
 const RandomTypes = () => {
-  // Utilisation du hook personnalisé
   const { types, isError, listId } = useRandomTypes();
 
   if (isError) {
@@ -27,7 +25,7 @@ const RandomTypes = () => {
             </Link>
           );
         }
-        return null; // Retourner null si le type n'est pas dans la liste des ID aléatoires
+        return null;
       })}
     </section>
   );

@@ -1,4 +1,3 @@
-// src/hooks/useRandomTypes.js
 import { useEffect, useState } from "react";
 
 const useRandomTypes = () => {
@@ -15,9 +14,8 @@ const useRandomTypes = () => {
       .catch(() => {
         setIsError(true);
       });
-  }, []); // Le tableau vide [] signifie que l'effet se déclenche uniquement au montage du composant
+  }, []);
 
-  // Génération des types aléatoires
   for (let i = 0; i < 3; i++) {
     listId.push(Math.floor(Math.random() * (53 - 37 + 1)) + 37);
   }

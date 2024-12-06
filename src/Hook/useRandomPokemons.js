@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 
-// Hook personnalisé pour récupérer une équipe de Pokémon
 const useRandomPokemons = () => {
   const [pokemons, setPokemons] = useState(null);
   const [isError, setIsError] = useState(false);
@@ -14,7 +13,7 @@ const useRandomPokemons = () => {
       .catch(() => {
         setIsError(true);
       });
-  }, []); // Le tableau vide [] signifie que l'effet se déclenche uniquement au montage du composant
+  }, []);
 
   return { pokemons, isError };
 };

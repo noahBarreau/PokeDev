@@ -15,7 +15,7 @@ function App() {
       <>
         <Header />
         
-        <h1>Tous les Pokémons</h1>
+        <h1>Tous les Pokémons de type : {type}</h1>
         <PokemonByTypes type={type}/>
       </>
     )

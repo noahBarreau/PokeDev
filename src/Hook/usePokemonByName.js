@@ -1,4 +1,3 @@
-// src/Hook/usePokemonByName.js
 import { useEffect, useState } from "react";
 
 const usePokemonByName = (name) => {
@@ -6,7 +5,7 @@ const usePokemonByName = (name) => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if (!name) return; // Vérifie si le nom est défini avant d'effectuer l'appel API
+    if (!name) return;
 
     fetch(`https://pokebuildapi.fr/api/v1/pokemon/${name}`)
       .then((response) => response.json())
@@ -16,7 +15,7 @@ const usePokemonByName = (name) => {
       .catch(() => {
         setIsError(true);
       });
-  }, [name]); // L'effet se déclenche chaque fois que le nom change
+  }, [name]);
 
   return { pokemon, isError };
 };

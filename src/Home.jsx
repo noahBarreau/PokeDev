@@ -4,7 +4,7 @@ import RandomPokemons from "./component/ComponentRandomPokemons";
 import RandomTypes from "./component/ComponentRandomTypes";
 import { Link } from 'react-router-dom';
 
-import './css/style.css'; // Assurez-vous d'importer le bon fichier CSS
+import './css/style.css';
 
 function Home() {
   const [search, setSearch] = useState("");

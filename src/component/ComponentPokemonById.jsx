@@ -1,10 +1,8 @@
-// src/components/PokemonById.js
 import React from "react";
-import usePokemonById from "../Hook/usePokemonById"; // Importation du hook
-import "../css/style.css"; // Chemin CSS mis à jour
+import usePokemonById from "../Hook/usePokemonById";
+import "../css/style.css";
 
 const PokemonById = ({ id }) => {
-  // Utilisation du hook personnalisé
   const { pokemon, isError } = usePokemonById(id);
 
   if (isError) {
