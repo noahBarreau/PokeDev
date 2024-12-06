@@ -16,9 +16,9 @@ const useRandomTypes = () => {
       });
   }, []);
 
-  for (let i = 0; i < 3; i++) {
-    listId.push(Math.floor(Math.random() * (53 - 37 + 1)) + 37);
-  }
+  for (let i = 0; i < 10; i++) {
+    listId.push(Math.floor(Math.random() * 838) + 1);
+  }  
 
   return { types, isError, listId };
 };
