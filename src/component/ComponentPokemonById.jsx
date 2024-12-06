@@ -15,6 +15,47 @@ const PokemonById = ({ id }) => {
     return <p>Chargement...</p>;
   }
 
+  const getTypeClass = (type) => {
+    switch (type.toLowerCase()) {
+      case "feu":
+        return "type-fire";
+      case "eau":
+        return "type-water";
+      case "plante":
+        return "type-grass";
+      case "électrique":
+        return "type-electric";
+      case "glace":
+        return "type-ice";
+      case "combat":
+        return "type-fighting";
+      case "poison":
+        return "type-poison";
+      case "sol":
+        return "type-ground";
+      case "vol":
+        return "type-flying";
+      case "psy":
+        return "type-psychic";
+      case "insecte":
+        return "type-bug";
+      case "roche":
+        return "type-rock";
+      case "spectre":
+        return "type-ghost";
+      case "dragon":
+        return "type-dragon";
+      case "ténèbres":
+        return "type-dark";
+      case "acier":
+        return "type-steel";
+      case "fée":
+        return "type-fairy";
+      default:
+        return "type-default";
+    }
+  };
+
   return (
 <section className="pokemon-container">
             return (
@@ -43,6 +84,13 @@ const PokemonById = ({ id }) => {
                   <span className="stat" style={{ color: '#FFC107' }}>
                     Speed: {pokemon.stats.speed}
                   </span>
+                </div>
+                <div className="pokemon-types">
+                  {pokemon.apiTypes.map((type) => (
+                    <span key={type.name} className={`type ${getTypeClass(type.name)}`}>
+                      {type.name}
+                    </span>
+                  ))}
                 </div>
               </article>
             );
