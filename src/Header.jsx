@@ -15,11 +15,12 @@ const Header = ({ onSearch }) => {
   return (
     <header className="header">
       <div className="header-logo">
+      <Link to="/">
         <img src={pokeballLogo} alt="Pokéball Logo" className="pokeball-logo" />
+      </Link>
         <h1 className="header-title">Pokédex</h1>
       </div>
       <nav className="header-nav">
-        <Link to="/" className="nav-link">Accueil</Link>
         <Link to="/DisplayPokemonByGen" className="nav-link">Pokémons</Link>
         <Link to="/DisplayAllTypes" className="nav-link">Types</Link>
         <Link to="/DisplayRandomPokemonDetail" className="nav-link">Random</Link>

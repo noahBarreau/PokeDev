@@ -1,37 +1,34 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import Header from "./Header";
 import RandomPokemons from "./component/ComponentRandomPokemons";
 import RandomTypes from "./component/ComponentRandomTypes";
 import { Link } from 'react-router-dom';
 
-import './css/style.css';
+import './css/style.css'; // Assurez-vous d'importer le bon fichier CSS
 
 function Home() {
-
   const [search, setSearch] = useState("");
 
   const handleSearch = (query) => {
     setSearch(query);
     console.log(`Recherche : ${query}`);
   };
+
   return (
     <>
       <Header />
-
-      <div>
-        <h2>Résultats pour : {search}</h2>
-        {/* Ajoutez ici la logique pour filtrer ou afficher les résultats */}
+      
+      <div className="link-container">
+        <Link to={"/DisplayPokemon"} className="styled-link">Pokémon du moment</Link>
+        <RandomPokemons />
       </div>
 
-      <Link to={"/DisplayPokemon"}>Pokémon du moment</Link>
-      <RandomPokemons/>
-      <br></br>
-      <Link to={"/DisplayAllTypes"}>Type de pokémon</Link>
-      <RandomTypes/>
+      <div className="link-container">
+        <Link to={"/DisplayAllTypes"} className="styled-link">Type de pokémon</Link>
+        <RandomTypes />
+      </div>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
