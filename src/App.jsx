@@ -4,6 +4,7 @@ import DisplayAllTypes from "./DisplayAllTypes";
 import DisplayPokemon from "./DisplayPokemon";
 import AllPokemonByTypes from "./AllPokemonByTypes";
 import DisplayPokemonByGen from "./DisplayPokemonByGen";
+import DisplayRandomPokemonDetail from "./DisplayRandomPokemonDetail";
 
 
 import './css/style.css';
@@ -17,6 +18,7 @@ function App() {
           <Route path="/DisplayAllTypes" element={<DisplayAllTypes />} />
           <Route path="/AllPokemonByTypes" element={<AllPokemonByTypes />} />
           <Route path="/DisplayPokemonByGen" element={<DisplayPokemonByGen />} />
+          <Route path="/DisplayRandomPokemonDetail" element={<DisplayRandomPokemonDetail />} />
         </Routes>
       </BrowserRouter>
   );
