@@ -6,7 +6,7 @@ function DisplayRandomPokemonDetail() {
   const id = Math.floor(Math.random() * 838) + 1;
 
   return (
-    <div className="main-container"> {/* Ajout du conteneur principal */}
+    <div className="main-container"> 
       <Header />
       <PokemonById id={id} />
     </div>

@@ -359,14 +359,14 @@
   align-items: center;
   justify-content: flex-start;
   width: 200px;
-  padding: 20px; /* Augmente les marges internes */
+  padding: 20px;
   border: 2px solid #eee;
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.2s, box-shadow 0.2s;
-  min-height: 300px; /* Définit une hauteur minimale */
+  min-height: 300px;
 }
 
 .pokemon-card:hover {
@@ -441,4 +441,69 @@ html, body {
 
 .main-content {
   flex-grow: 1;
+}
+
+.fight-result-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  text-align: center;
+  animation: pop-up 0.5s ease-in-out;
+}
+
+@keyframes pop-up {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+.combat-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.pokemon-combat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.pokemon-combat-card:hover {
+  transform: scale(1.1);
+}
+
+.pokemon-combat-image {
+  width: 150px;
+  height: 150px;
+}
+
+.pokemon-combat-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.pokemon-combat-stats {
+  margin-top: 0.5rem;
+  text-align: center;
 }
