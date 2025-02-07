@@ -10,3 +10,6 @@ Currently, two official plugins are available:
 -------------------------
 
 Lien Api : https://pokebuildapi.fr/api/v1
+
+Pour lancer le projet :
+faire npm run dev dans la console
